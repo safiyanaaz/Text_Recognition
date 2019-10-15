@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Text Recognition </title>
+<style>
+h2{
+	color:red;
+	text-align: center;
+	font-size: 40px;
+}
+div{
+	border:1px solid black;
+	border-width: 2px;
+	padding: 20px;
+	width: 700px;
+	text-align: center;
+	margin-left: 550px;
+	margin-right: 500px;
+	margin-top:200px; 
+	font-size: 30px;
+}
+input[type=text]{
+	width: 350px;
+	height: 40px;
+	border: 2px solid black;
+  border-radius: 4px;
+
+}
+input[type=submit]{
+	width: 200px;
+	height: 40px;
+	border: 2px solid black;
+  border-radius: 4px;
+
+}
+</style>
+</head>
+
+<body>
+<div class="whole">
+<h2>Text Recognition</h2>
+	<form action="{{ url_for('predict')}}" method="POST">
+	
+	<p>Image Path</p>
+	<input type="text" name="imagepath">
+	<br>
+	<p>Name in which audio will get Save</p>
+	<input type="text" name="imagename">
+	<br>
+	<br>
+	<input type="submit" class="btn-ifo" value="Recognize" style="font-size: 20px; background-color: #3CBC8D;">
+	</form>
+	
+
+
+</div>
+</body>			
+</html>
